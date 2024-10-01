@@ -1,0 +1,7 @@
+requests
+httpx
+tenacity
+selectolax
+numpy
+pandas
+openpyxl

@@ -1,0 +1,19 @@
+[2024-10-01T08:54:03.340+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-01T08:54:03.374+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: impression_scraper_dag.start_task manual__2024-10-01T08:54:01.631856+00:00 [queued]>
+[2024-10-01T08:54:03.389+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: impression_scraper_dag.start_task manual__2024-10-01T08:54:01.631856+00:00 [queued]>
+[2024-10-01T08:54:03.390+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-01T08:54:03.418+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): start_task> on 2024-10-01 08:54:01.631856+00:00
+[2024-10-01T08:54:03.542+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=218) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-10-01T08:54:03.501+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'impression_scraper_dag', 'start_task', 'manual__2024-10-01T08:54:01.631856+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/impression.py', '--cfg-path', '/tmp/tmp1hfvelg6']
+[2024-10-01T08:54:03.549+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask start_task
+[2024-10-01T08:54:03.549+0000] {standard_task_runner.py:72} INFO - Started process 223 to run task
+[2024-10-01T08:54:03.807+0000] {task_command.py:467} INFO - Running <TaskInstance: impression_scraper_dag.start_task manual__2024-10-01T08:54:01.631856+00:00 [running]> on host ffb6fea74e64
+[2024-10-01T08:54:04.131+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='impression_scraper_dag' AIRFLOW_CTX_TASK_ID='start_task' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T08:54:01.631856+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-01T08:54:01.631856+00:00'
+[2024-10-01T08:54:04.135+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-01T08:54:04.213+0000] {impression.py:10} INFO - this DAG started!
+[2024-10-01T08:54:04.214+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-01T08:54:04.263+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-01T08:54:04.264+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=impression_scraper_dag, task_id=start_task, run_id=manual__2024-10-01T08:54:01.631856+00:00, execution_date=20241001T085401, start_date=20241001T085403, end_date=20241001T085404
+[2024-10-01T08:54:04.338+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-01T08:54:04.379+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-01T08:54:04.390+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
