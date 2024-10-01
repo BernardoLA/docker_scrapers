@@ -21,12 +21,12 @@ import os
 def is_retryable_exception(exception):
     return isinstance(exception, (httpx.TimeoutException, httpx.ReadTimeout, httpx.ConnectError))
 
-# Define the conditions for retrying based on HTTP status codes
-def is_retryable_status_code(response):
-    return response.status_code in [500, 502, 503, 504, ]
+# # Define the conditions for retrying based on HTTP status codes
+# def is_retryable_status_code(response):
+#     return response.status_code in [500, 502, 503, 504]
 
 @retry(
-    retry=(retry_if_result(is_retryable_status_code) | retry_if_result(is_retryable_exception)),
+    retry=(retry_if_result(is_retryable_exception)),
     stop=stop_after_attempt(5),
     wait=wait_random(min=1, max=5),
 )
